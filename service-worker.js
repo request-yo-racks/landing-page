@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["index.html","e0150a6a55e69d567459a673c530f5b6"]];
+var precacheConfig = [["index.html","85ad5e137274ee99d374ebe54cebff40"],["src/ryr-landing-page-app.js","fdca46aa41f2ea522a31c46aba01e924"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
