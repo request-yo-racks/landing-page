@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.1.0",
+    "debug": "2.6.9",
     "growl": "^1.10.5",
+    "lodash": "4.17.5",
     "wct-browser-legacy": "^1.0.0"
   }
 }
