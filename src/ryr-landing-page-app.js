@@ -1,5 +1,10 @@
-define(["../node_modules/@polymer/polymer/lib/legacy/polymer-fn.js","../node_modules/@polymer/polymer/lib/utils/html-tag.js","../node_modules/@polymer/app-layout/app-header/app-header.js","../node_modules/@polymer/app-layout/app-header-layout/app-header-layout.js","../node_modules/@polymer/app-layout/app-scroll-effects/app-scroll-effects.js","../node_modules/@polymer/app-layout/app-toolbar/app-toolbar.js","../node_modules/@polymer/iron-flex-layout/iron-flex-layout.js","../node_modules/@polymer/iron-icons/iron-icons.js","../node_modules/@polymer/paper-icon-button/paper-icon-button.js"],function(_polymerFn,_htmlTag){"use strict";(0,_polymerFn.Polymer)({_template:_htmlTag.html`
+define(["../node_modules/@polymer/polymer/polymer-element.js","../node_modules/@polymer/app-layout/app-header/app-header.js","../node_modules/@polymer/app-layout/app-header-layout/app-header-layout.js","../node_modules/@polymer/app-layout/app-scroll-effects/app-scroll-effects.js","../node_modules/@polymer/app-layout/app-toolbar/app-toolbar.js","../node_modules/@polymer/iron-flex-layout/iron-flex-layout.js","../node_modules/@polymer/iron-icons/iron-icons.js","../node_modules/@polymer/paper-icon-button/paper-icon-button.js","../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"],function(_polymerElement){"use strict";class RyrLandingPageApp extends _polymerElement.PolymerElement{static get template(){return _polymerElement.html`
     <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
       a {
         text-decoration: none;
@@ -122,7 +127,7 @@ define(["../node_modules/@polymer/polymer/lib/legacy/polymer-fn.js","../node_mod
 
     <app-header-layout>
 
-      <app-header  slot="header">
+      <app-header slot="header">
 
         <app-toolbar class="toolbar">
           <img class="logo" src="images/logos/ryr_logo_64x64.png" />
@@ -149,4 +154,4 @@ define(["../node_modules/@polymer/polymer/lib/legacy/polymer-fn.js","../node_mod
       </section>
 
     </app-header-layout>
-`,is:"ryr-landing-page-app"})});
+    `}}customElements.define("ryr-landing-page-app",RyrLandingPageApp)});
