@@ -1,5 +1,6 @@
-import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
-import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+// import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
+// import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
 
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-header-layout/app-header-layout.js';
@@ -8,10 +9,18 @@ import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import '@polymer/iron-flex-layout/iron-flex-layout.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
+import '@webcomponents/webcomponentsjs/webcomponents-loader.js';
 
-Polymer({
-  _template: html`
+class RyrLandingPageApp extends PolymerElement {
+
+  static get template() {
+    return html`
     <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
       a {
         text-decoration: none;
@@ -134,7 +143,7 @@ Polymer({
 
     <app-header-layout>
 
-      <app-header  slot="header">
+      <app-header slot="header">
 
         <app-toolbar class="toolbar">
           <img class="logo" src="images/logos/ryr_logo_64x64.png" />
@@ -161,7 +170,8 @@ Polymer({
       </section>
 
     </app-header-layout>
-`,
+    `;
+  }
+}
 
-  is: 'ryr-landing-page-app'
-});
+customElements.define('ryr-landing-page-app', RyrLandingPageApp);
