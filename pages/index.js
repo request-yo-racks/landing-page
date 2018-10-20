@@ -9,7 +9,6 @@ export default () =>
             color: #B35C22;
             display: inline-block;
             margin-left: 10px;
-
         }
 
         .navbar > * {
