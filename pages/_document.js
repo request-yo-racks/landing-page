@@ -11,16 +11,16 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <style>{`
-                    * {
-                        margin: 0;
-                        padding: 0;
-                    }
-                    html, body {
-                        width: 100%;
-                        min-height: 100%;
-                        font-family: Helvetica, sans-serif;
-                    }
-                    `}
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            html, body {
+              width: 100%;
+              min-height: 100%;
+              font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+            }
+          `}
           </style>
         </Head>
         <body className="custom_class">
