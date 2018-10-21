@@ -26,3 +26,4 @@ pids
 typings/
 yarn-debug.log*
 yarn-error.log*
+static/workbox/
