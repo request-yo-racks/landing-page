@@ -10,7 +10,7 @@ export default () =>
       <link rel="manifest" href="/static/manifest.json" />
     </Head>
     <div className="navbar">
-      <img className="logo" src="/static/images/logos/ryr_logo_64x64.png" alt="RYR logo" />
+      <img className="logo" src="/static/images/logos/ryr_logo-64x64.png" alt="RYR logo" />
       <h1>Request Yo Racks</h1>
     </div>
     <style jsx>{`
