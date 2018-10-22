@@ -1,7 +1,0 @@
-{
-  "name": "ryr-landing-page",
-  "short_name": "ryr-landing-page",
-  "description": "RYR landing page",
-  "start_url": "/",
-  "display": "standalone"
-}
