@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
             html, body {
               width: 100%;
               min-height: 100%;
-              font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+              font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
             }
           `}
           </style>
