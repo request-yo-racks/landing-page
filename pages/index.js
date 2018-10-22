@@ -18,61 +18,105 @@ export default () =>
       <p>Always park your bike securely</p>
     </div>
     <section id="about">
-      <div className="logo">
-        <img src="/static/images/logos/ryr_logo-256x256.png" alt="RYR logo" />
-      </div>
-      <div>
-        <img className="how-it-works" src="/static/images/how-it-works.png" alt="How it works" />
+      <div className="info">
+        <div className="logo">
+          <img src="/static/images/logos/ryr_logo-256x256.png" alt="RYR logo" />
+        </div>
+        <div className="how-it-works">
+          <img src="/static/images/how-it-works.png" alt="How it works" />
+        </div>
       </div>
     </section>
     <style jsx>{`
-        h1 {
-            color: #B35C22;
-            display: inline-block;
-            margin-left: 0.5em;
-        }
+      h1 {
+          color: #B35C22;
+          display: inline-block;
+          margin-left: 0.5em;
+      }
 
-        .navbar {
-          padding: 0.75em;
-        }
+      .navbar {
+        padding: 0.75em;
+      }
 
-        .navbar > * {
-          vertical-align: middle;
-        }
+      .navbar > * {
+        vertical-align: middle;
+      }
 
-        .cover {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          text-align: center;
-          height: calc(100vh - 128px);
-          padding: 0 16px;
-          background-image: url('/static/images/bike-rack-dark.png');
-          backgrond-repeat: no-repeat;
-          background-size: cover;
-          color: white;
-          text-align: center;
-        }
+      .cover {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: calc(100vh - 64px);
+        padding: 0 16px;
+        background-image: url('/static/images/bike-rack-dark.png');
+        backgrond-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-align: center;
+      }
 
+      .cover > h2 {
+        font-size: 3.5em;
+      }
+
+      .cover > p {
+        font-size: 2em;
+      }
+
+      #about .info {
+        width: 66%;
+        margin: 2em auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #about .info .logo {
+        width: 33%;
+        margin-right: 1em;
+      }
+
+      #about .info .logo img {
+        width: 100%;
+        max-width: 256px;
+        display:flex;
+        margin: 0 auto;
+      }
+
+      #about .info .how-it-works {
+        width: 67%;
+      }
+
+      #about .info .how-it-works img {
+        width: 100%;
+        max-width: 960px;
+      }
+
+      @media (max-width: 600px) {
         .cover > h2 {
-          font-size: 4em;
+          font-size: 2.5em;
         }
-
         .cover > p {
-          font-size: 2em;
+          font-size: 1em;
         }
 
-        #about {
-          margin: 2em auto;
-          display: flex;
-          justify-content: center;
-          flex-direction: row;
-          align-items: center;
+        #about .info {
+          flex-direction: column;
         }
 
-        #about .how-it-works {
-          max-width: 640px;
+        #about .info .how-it-works {
+          order: 1;
+          margin-bottom: 1em;
+          width: 100%;
         }
-        `}
+
+        #about .info .logo {
+          order: 2;
+          margin-right: 0;
+        }
+      }
+    `}
     </style>
   </div>
