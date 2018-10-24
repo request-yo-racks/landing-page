@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-export default () =>
+export default () => (
   <div>
     <Head>
       <title>Request Yo Racks</title>
@@ -27,96 +27,98 @@ export default () =>
         </div>
       </div>
     </section>
-    <style jsx>{`
-      h1 {
-          color: #B35C22;
+    <style jsx>
+      {`
+        h1 {
+          color: #b35c22;
           display: inline-block;
           margin-left: 0.5em;
-      }
-
-      .navbar {
-        padding: 0.75em;
-      }
-
-      .navbar > * {
-        vertical-align: middle;
-      }
-
-      .cover {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        height: calc(100vh - 64px);
-        padding: 0 16px;
-        background-image: url('/static/images/bike-rack-dark.png');
-        backgrond-repeat: no-repeat;
-        background-size: cover;
-        color: white;
-        text-align: center;
-      }
-
-      .cover > h2 {
-        font-size: 3.5em;
-      }
-
-      .cover > p {
-        font-size: 2em;
-      }
-
-      #about .info {
-        width: 66%;
-        margin: 2em auto;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      #about .info .logo {
-        width: 33%;
-        margin-right: 1em;
-      }
-
-      #about .info .logo img {
-        width: 100%;
-        max-width: 256px;
-        display:flex;
-        margin: 0 auto;
-      }
-
-      #about .info .how-it-works {
-        width: 67%;
-      }
-
-      #about .info .how-it-works img {
-        width: 100%;
-        max-width: 960px;
-      }
-
-      @media (max-width: 600px) {
-        .cover > h2 {
-          font-size: 2.5em;
         }
+
+        .navbar {
+          padding: 0.75em;
+        }
+
+        .navbar > * {
+          vertical-align: middle;
+        }
+
+        .cover {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          height: calc(100vh - 64px);
+          padding: 0 16px;
+          background-image: url('/static/images/bike-rack-dark.png');
+          backgrond-repeat: no-repeat;
+          background-size: cover;
+          color: white;
+          text-align: center;
+        }
+
+        .cover > h2 {
+          font-size: 3.5em;
+        }
+
         .cover > p {
-          font-size: 1em;
+          font-size: 2em;
         }
 
         #about .info {
-          flex-direction: column;
-        }
-
-        #about .info .how-it-works {
-          order: 1;
-          margin-bottom: 1em;
-          width: 100%;
+          width: 66%;
+          margin: 2em auto;
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          align-items: center;
         }
 
         #about .info .logo {
-          order: 2;
-          margin-right: 0;
+          width: 33%;
+          margin-right: 1em;
         }
-      }
-    `}
+
+        #about .info .logo img {
+          width: 100%;
+          max-width: 256px;
+          display: flex;
+          margin: 0 auto;
+        }
+
+        #about .info .how-it-works {
+          width: 67%;
+        }
+
+        #about .info .how-it-works img {
+          width: 100%;
+          max-width: 960px;
+        }
+
+        @media (max-width: 600px) {
+          .cover > h2 {
+            font-size: 2.5em;
+          }
+          .cover > p {
+            font-size: 1em;
+          }
+
+          #about .info {
+            flex-direction: column;
+          }
+
+          #about .info .how-it-works {
+            order: 1;
+            margin-bottom: 1em;
+            width: 100%;
+          }
+
+          #about .info .logo {
+            order: 2;
+            margin-right: 0;
+          }
+        }
+      `}
     </style>
   </div>
+);

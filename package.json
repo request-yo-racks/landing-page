@@ -41,6 +41,7 @@
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-standard": "^12.0.0",
@@ -48,6 +49,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
     "hubot-test-helper": "^1.9.0",
     "jest": "^23.6.0",
@@ -58,17 +60,40 @@
     "webpack-pwa-manifest": "^3.7.1"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
+    "settings": {
+      "react": {
+        "createClass": "createReactClass",
+        "pragma": "React",
+        "version": "16.0"
+      },
+      "propWrapperFunctions": [
+        "forbidExtraProps"
+      ]
+    },
+    "globals": {
+      "getInitialProps": true
+    },
     "extends": [
-      "plugin:prettier/recommended"
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended"
     ],
     "plugins": [
-      "prettier"
+      "prettier",
+      "react"
     ],
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error"
     },
     "parserOptions": {
-      "ecmaVersion": 2015
+      "ecmaVersion": 2015,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "sourceType": "module"
     }
   },
   "prettier": {
