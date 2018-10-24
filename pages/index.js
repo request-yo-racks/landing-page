@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default () => (
+const Index = () => (
   <div>
     <Head>
       <title>Request Yo Racks</title>
@@ -122,3 +122,5 @@ export default () => (
     </style>
   </div>
 );
+
+export default Index;
