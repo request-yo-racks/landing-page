@@ -60,6 +60,11 @@
     "webpack-pwa-manifest": "^3.7.1"
   },
   "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
     "parser": "babel-eslint",
     "settings": {
       "react": {
@@ -84,9 +89,11 @@
       "react"
     ],
     "rules": {
+      "no-console": "off",
       "prettier/prettier": "error",
       "react/jsx-uses-react": "error",
-      "react/jsx-uses-vars": "error"
+      "react/jsx-uses-vars": "error",
+      "react/react-in-jsx-scope": "off"
     },
     "parserOptions": {
       "ecmaVersion": 2015,

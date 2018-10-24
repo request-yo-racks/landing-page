@@ -4,7 +4,7 @@ import App, { Container } from 'next/app';
 import OfflineSupport from '../components/OfflineSupport';
 
 class CustomApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
