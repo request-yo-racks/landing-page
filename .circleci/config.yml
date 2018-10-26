@@ -1,0 +1,61 @@
+working_directory: &working_directory
+  ~/project
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:8.12.0
+  working_directory: *working_directory
+
+repo_cache_key: &repo_cache_key
+  dependencies-{{ checksum "package.json" }}
+
+version: 2
+jobs:
+  prepare:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys: *repo_cache_key
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: *repo_cache_key
+  format:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys: *repo_cache_key
+      - run: npm lint:format
+  lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys: *repo_cache_key
+      - run: npm lint:javascript
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys: *repo_cache_key
+      - run: npm test
+
+workflows:
+  version: 2
+  gates:
+    jobs:
+      - prepare
+      - format:
+          requires:
+            - prepare
+      - lint:
+          requires:
+            - prepare
+      - test:
+          requires:
+            - prepare
+
