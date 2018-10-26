@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 
-const Index = (props) => (
+const Index = () => (
   <div>
     <Head>
       <title>Request Yo Racks</title>
