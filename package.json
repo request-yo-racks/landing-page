@@ -43,8 +43,6 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.7.0",
@@ -127,10 +125,6 @@
   "jest": {
     "setupTestFrameworkScriptFile": "jest-enzyme",
     "testEnvironment": "enzyme",
-    "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js",
-    "setupFiles": [
-      "<rootDir>/jest.setup.js"
-    ],
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
