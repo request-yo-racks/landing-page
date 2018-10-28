@@ -15,7 +15,7 @@
     "lint:format": "prettier -l --debug-check 'pages/**/*.js' 'components/**/*.js'",
     "lint:javascript": "eslint --ext js,html pages components",
     "start": "NODE_ENV=production node server.js",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,7 @@
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.7.0",
