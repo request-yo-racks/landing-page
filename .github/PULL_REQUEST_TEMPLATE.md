@@ -11,6 +11,7 @@ Select all the choices that apply:
 - Breaking change (fix or feature that would cause existing functionality to change)
 - Code cleanup / Refactoring
 - Documentation
+- Security fix
 
 Description
 -----------
